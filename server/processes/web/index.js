@@ -6,7 +6,6 @@ const config = require('../../config');
 const BoarServer = require('boar-server').app;
 const ssl = require('koa-ssl');
 const koaInterceptor = require('koa-escher-auth').interceptor;
-// const database = require('../../lib/database');
 
 const createApp = function() {
   const app = new koa();
@@ -19,8 +18,6 @@ const createApp = function() {
 };
 
 if (!module.parent) {
-  // database.connect();
-
   createApp().listen(config.port);
   console.log(`Server is listening on port: ${config.port}`);
 }
