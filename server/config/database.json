@@ -1,0 +1,29 @@
+{
+  "development": {
+    "use_env_variable": "DATABASE_URL",
+    "pool": { "max": 5, "min": 0, "idle": 10000 },
+    "logging": false
+  },
+  "test": {
+    "use_env_variable": "DATABASE_TEST_URL",
+    "pool": { "max": 5, "min": 0, "idle": 10000 },
+    "logging": false
+  },
+  "staging": {
+    "use_env_variable": "DATABASE_URL",
+    "pool": { "max": 5, "min": 0, "idle": 10000 },
+    "dialect": "postgres",
+    "dialectOptions": {
+      "ssl": true
+    }
+  },
+  "production": {
+    "use_env_variable": "DATABASE_URL",
+    "pool": { "max": 2, "min": 0, "idle": 1000 },
+    "logging": false,
+    "dialect": "postgres",
+    "dialectOptions": {
+      "ssl": true
+    }
+  }
+}

@@ -1,0 +1,15 @@
+dist
+logs
+*.log
+pids
+*.pid
+*.seed
+lib-cov
+coverage
+
+build
+.idea
+node_modules
+.env
+
+.vagrant
